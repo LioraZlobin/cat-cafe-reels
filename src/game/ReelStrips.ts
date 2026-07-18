@@ -1,142 +1,283 @@
 import type { SymbolId } from "./types";
 
+
+
 /*
+
  * Wild ו-Scatter מופיעים פחות פעמים
+
  * מהסמלים הרגילים, ולכן הם נדירים יותר.
+
  */
+
 export const REEL_STRIPS: SymbolId[][] = [
-  [
-    "milk",
-    "coffee",
-    "fish",
-    "yarn",
-    "cupcake",
-    "cat",
-    "scatter",
-    "fish",
-    "coffee",
-    "wild",
-    "yarn",
-    "cupcake",
-    "milk",
-    "cat",
-    "fish",
-    "coffee",
-    "scatter",
-    "yarn",
-    "milk",
-    "cupcake",
-    "fish",
-    "coffee",
-    "cat",
-    "milk",
-  ],
 
   [
-    "coffee",
+
     "milk",
-    "scatter",
+
+    "coffee",
+
     "fish",
+
     "yarn",
-    "cat",
-    "coffee",
-    "fish",
-    "milk",
+
     "cupcake",
+
+    "cat",
+
+    "scatter",
+
+    "fish",
+
+    "coffee",
+
     "wild",
+
     "yarn",
-    "coffee",
-    "cat",
-    "milk",
-    "fish",
-    "scatter",
+
     "cupcake",
-    "coffee",
+
     "milk",
-    "yarn",
-    "fish",
+
     "cat",
+
+    "fish",
+
     "coffee",
+
+    "scatter",
+
+    "yarn",
+
+    "milk",
+
+    "cupcake",
+
+    "fish",
+
+    "coffee",
+
+    "cat",
+
+    "milk",
+
   ],
 
-  [
-    "fish",
-    "coffee",
-    "milk",
-    "yarn",
-    "cupcake",
-    "cat",
-    "fish",
-    "milk",
-    "coffee",
-    "scatter",
-    "yarn",
-    "wild",
-    "cupcake",
-    "fish",
-    "milk",
-    "coffee",
-    "cat",
-    "yarn",
-    "fish",
-    "scatter",
-    "milk",
-    "coffee",
-    "cat",
-    "fish",
-  ],
+
 
   [
-    "milk",
-    "fish",
+
     "coffee",
-    "cupcake",
-    "yarn",
-    "cat",
+
     "milk",
-    "coffee",
-    "fish",
-    "wild",
-    "cupcake",
-    "yarn",
-    "milk",
-    "fish",
+
     "scatter",
-    "coffee",
-    "cat",
-    "milk",
-    "yarn",
-    "cupcake",
+
     "fish",
-    "coffee",
+
+    "yarn",
+
     "cat",
+
+    "coffee",
+
+    "fish",
+
     "milk",
+
+    "cupcake",
+
+    "wild",
+
+    "yarn",
+
+    "coffee",
+
+    "cat",
+
+    "milk",
+
+    "fish",
+
+    "scatter",
+
+    "cupcake",
+
+    "coffee",
+
+    "milk",
+
+    "yarn",
+
+    "fish",
+
+    "cat",
+
+    "coffee",
+
   ],
 
+
+
   [
-    "coffee",
-    "milk",
+
     "fish",
+
+    "coffee",
+
+    "milk",
+
     "yarn",
+
     "cupcake",
+
     "cat",
-    "coffee",
+
     "fish",
+
     "milk",
+
+    "coffee",
+
     "scatter",
+
     "yarn",
-    "cupcake",
+
     "wild",
-    "coffee",
-    "fish",
-    "milk",
-    "cat",
-    "yarn",
-    "coffee",
+
     "cupcake",
-    "milk",
+
     "fish",
-    "cat",
+
+    "milk",
+
     "coffee",
+
+    "cat",
+
+    "yarn",
+
+    "fish",
+
+    "scatter",
+
+    "milk",
+
+    "coffee",
+
+    "cat",
+
+    "fish",
+
   ],
+
+
+
+  [
+
+    "milk",
+
+    "fish",
+
+    "coffee",
+
+    "cupcake",
+
+    "yarn",
+
+    "cat",
+
+    "milk",
+
+    "coffee",
+
+    "fish",
+
+    "wild",
+
+    "cupcake",
+
+    "yarn",
+
+    "milk",
+
+    "fish",
+
+    "scatter",
+
+    "coffee",
+
+    "cat",
+
+    "milk",
+
+    "yarn",
+
+    "cupcake",
+
+    "fish",
+
+    "coffee",
+
+    "cat",
+
+    "milk",
+
+  ],
+
+
+
+  [
+
+    "coffee",
+
+    "milk",
+
+    "fish",
+
+    "yarn",
+
+    "cupcake",
+
+    "cat",
+
+    "coffee",
+
+    "fish",
+
+    "milk",
+
+    "scatter",
+
+    "yarn",
+
+    "cupcake",
+
+    "wild",
+
+    "coffee",
+
+    "fish",
+
+    "milk",
+
+    "cat",
+
+    "yarn",
+
+    "coffee",
+
+    "cupcake",
+
+    "milk",
+
+    "fish",
+
+    "cat",
+
+    "coffee",
+
+  ],
+
 ];

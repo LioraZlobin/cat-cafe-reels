@@ -863,8 +863,8 @@ private createFreeSpinsPanel(): void {
    */
   const freeSpinsWinY =
     this.boardY +
-    this.boardHeight +
-    20;
+    this.boardHeight -
+    10;
 
   this.freeSpinsWinText =
     this.add
@@ -1119,7 +1119,7 @@ private updateFreeSpinsPanel(): void {
   this.freeSpinsWinText
     .setVisible(shouldShow)
     .setText(
-      `FREE SPINS WIN: ${this.formatNumber(
+      `FREE SPINS WIN: $${this.formatNumber(
         this.freeSpinsTotalWin,
       )}`,
     );
@@ -1486,8 +1486,8 @@ private createProfessionalHud(): void {
   this.balanceText =
     this.add
       .text(
-        mapX(270),
-        mapY(500),
+        mapX(260),
+        mapY(490),
         "",
         valueStyle,
       )
@@ -1500,8 +1500,8 @@ private createProfessionalHud(): void {
   this.betText =
     this.add
       .text(
-        mapX(535),
-        mapY(500),
+        mapX(525),
+        mapY(490),
         "",
         valueStyle,
       )
@@ -1514,7 +1514,7 @@ private createProfessionalHud(): void {
   this.winText =
     this.add
       .text(
-        mapX(1165),
+        mapX(1150),
         mapY(500),
         "",
         valueStyle,
@@ -3465,7 +3465,7 @@ private scheduleNextAutoSpin(
         counterState.value;
 
       this.winText.setText(
-  this.formatNumber(this.displayedWin),
+  `$${this.formatNumber(this.displayedWin)}`,
 );
     },
 
@@ -3477,10 +3477,10 @@ private scheduleNextAutoSpin(
         targetWin;
 
       this.winText.setText(
-        `${this.formatNumber(
-          this.displayedWin,
-        )}`,
-      );
+  `$${this.formatNumber(
+    this.displayedWin,
+  )}`,
+);
 
       this.winCounterTween =
         undefined;
@@ -5048,23 +5048,17 @@ this.winResetTimer = undefined;
   );
 }
 
-  private updateGameInfo(): void {
+ private updateGameInfo(): void {
   this.balanceText.setText(
-    this.formatNumber(
-      this.balance,
-    ),
+    `$${this.formatNumber(this.balance)}`,
   );
 
   this.betText.setText(
-    this.formatNumber(
-      this.bet,
-    ),
+    `$${this.formatNumber(this.bet)}`,
   );
 
   this.winText.setText(
-    this.formatNumber(
-      this.displayedWin,
-    ),
+    `$${this.formatNumber(this.displayedWin)}`,
   );
 }
 
