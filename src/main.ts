@@ -36,4 +36,42 @@ const config: Phaser.Types.Core.GameConfig = {
   },
 };
 
-new Phaser.Game(config);
+const game = new Phaser.Game(config);
+
+/*
+ * אחרי שינוי גודל המסך או מעבר למצב טלפון,
+ * Phaser מחשב מחדש את המיקום האמיתי של הקנבס.
+ * כך אזורי הלחיצה נשארים בדיוק מעל הכפתורים.
+ */
+const refreshGameScale = (): void => {
+  window.requestAnimationFrame(() => {
+    game.scale.refresh();
+  });
+};
+
+window.addEventListener(
+  "resize",
+  refreshGameScale,
+);
+
+window.addEventListener(
+  "orientationchange",
+  refreshGameScale,
+);
+
+window.visualViewport?.addEventListener(
+  "resize",
+  refreshGameScale,
+);
+
+/*
+ * רענון נוסף לאחר שהעמוד סיים להיטען.
+ */
+window.addEventListener("load", () => {
+  refreshGameScale();
+
+  window.setTimeout(
+    refreshGameScale,
+    150,
+  );
+});
