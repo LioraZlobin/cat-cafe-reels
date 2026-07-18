@@ -5,6 +5,8 @@ export class SoundManager {
   private spinNoiseSource?: AudioBufferSourceNode;
   private spinNoiseGain?: GainNode;
 
+  private backgroundMusic?: HTMLAudioElement;
+  private backgroundMusicStarted = false;
   private enabled = true;
 
   /*
@@ -37,21 +39,61 @@ export class SoundManager {
   }
 
   setEnabled(enabled: boolean): void {
-    this.enabled = enabled;
+  this.enabled = enabled;
 
-    if (!enabled) {
-      this.stopSpinLoop();
-    }
+  if (!enabled) {
+    this.stopSpinLoop();
+    this.backgroundMusic?.pause();
+    this.backgroundMusicStarted = false;
+    return;
   }
+
+  this.startBackgroundMusic();
+}
 
   isEnabled(): boolean {
     return this.enabled;
   }
 
+  public startBackgroundMusic(): void {
+  if (
+    !this.enabled ||
+    this.backgroundMusicStarted
+  ) {
+    return;
+  }
+
+  if (!this.backgroundMusic) {
+    this.backgroundMusic =
+      new Audio(
+        "/assets/audio/background-music.mp3",
+      );
+
+    this.backgroundMusic.loop = true;
+    this.backgroundMusic.volume = 0.18;
+    this.backgroundMusic.preload = "auto";
+  }
+
+  this.backgroundMusicStarted = true;
+
+  void this.backgroundMusic
+    .play()
+    .catch((error) => {
+      console.error(
+        "Background music could not start:",
+        error,
+      );
+
+      this.backgroundMusicStarted = false;
+    });
+}
+
   playButtonClick(): void {
     if (!this.enabled) {
       return;
     }
+
+    this.startBackgroundMusic();
 
     const context =
       this.ensureAudioContext();
@@ -70,6 +112,8 @@ export class SoundManager {
     if (!this.enabled) {
       return;
     }
+
+     this.startBackgroundMusic();
 
     const context =
       this.ensureAudioContext();
